@@ -10,7 +10,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v4
       - name: Load & chache dependencies
-        uses: ./.github/actions/cache-deps
+        uses: ./.github/workflows/actions/cache-deps
       - name: Lint code
         run: npm run lint
   test:
@@ -19,7 +19,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v4
       - name: Load & chache dependencies
-        uses: ./.github/actions/cache-deps
+        uses: ./.github/workflows/actions/cache-deps
       
       - name: Test code
         id: run-tests
@@ -37,7 +37,7 @@ jobs:
       - name: Get code
         uses: actions/checkout@v4
       - name: Load & chache dependencies
-        uses: ./.github/actions/cache-deps
+        uses: ./.github/workflows/actions/cache-deps
      
       - name: Build website
         run: npm run build
